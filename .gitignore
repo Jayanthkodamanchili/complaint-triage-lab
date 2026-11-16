@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# NEW CODE START
+# Downloaded CFPB data: too big for Git, and anyone can re-download it
+data/
+# NEW CODE END

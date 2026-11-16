@@ -124,6 +124,8 @@ pandas==2.3.3
     #   gradio
 pillow==11.3.0
     # via gradio
+pyarrow==26.0.1
+    # via complaint-triage
 pydantic==2.12.3
     # via
     #   complaint-triage
