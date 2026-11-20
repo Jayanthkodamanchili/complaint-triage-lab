@@ -109,7 +109,9 @@ jinja2==3.1.6
 jiter==0.19.0
     # via openai
 joblib==1.6.0
-    # via scikit-learn
+    # via
+    #   complaint-triage
+    #   scikit-learn
 kiwisolver==1.5.1
     # via matplotlib
 markdown-it-py==4.3.0

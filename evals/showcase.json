@@ -1,0 +1,322 @@
+[
+  {
+    "row_id": 2278244,
+    "title": "Identity theft items on my credit report",
+    "customer_label": "credit_reporting",
+    "complaint": "It appears that my my credit file has been compromised. Again, I was going through my records & noticed many items which do not belong to me. Since Im a stickler for research, I found that under section 605b of the FCRA you are required by law to remove & block any items which is found to be fraud due to identity theft. The dispute items do not belong to me. Im attaching the required FTC Report for you and the bank 's records. Please block/remove these items. \nXXXX XXXX XXXX  XXXX XXXX, GA XXXX XXXX XXXX XXXX XXXX XXXX CA XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX",
+    "answers": {
+      "Claude Haiku 5.5": {
+        "answer": {
+          "product": "credit_reporting",
+          "issue": "Unrecognized items on credit file from identity theft",
+          "urgency": "high",
+          "summary": "The consumer says their credit file has accounts that do not belong to them due to suspected identity theft and asks that the items be blocked or removed under FCRA section 605B, attaching an FTC identity theft report."
+        },
+        "receipt": {
+          "tokens_in": 1276,
+          "tokens_out": 111,
+          "cost_usd": 0.00018310000000000003,
+          "seconds": 1.6710970401763916
+        }
+      },
+      "GPT-6 Luna": {
+        "answer": {
+          "product": "credit_reporting",
+          "issue": "Identity theft items on credit file",
+          "urgency": "high",
+          "summary": "The consumer says their credit file contains fraudulent items from identity theft and requests that they be blocked or removed."
+        },
+        "receipt": {
+          "tokens_in": 601,
+          "tokens_out": 52,
+          "cost_usd": 8.609999999999999e-05,
+          "seconds": 1.229935646057129
+        }
+      },
+      "Gemini Flash-Lite": {
+        "answer": {
+          "product": "credit_reporting",
+          "issue": "Fraudulent items on credit report from identity theft",
+          "urgency": "high",
+          "summary": "The consumer discovered fraudulent items on their credit report due to identity theft and requests their removal under the FCRA."
+        },
+        "receipt": {
+          "tokens_in": 468,
+          "tokens_out": 66,
+          "cost_usd": 0.000216,
+          "seconds": 3.3565673828125
+        }
+      },
+      "llama3.2 (local)": {
+        "answer": {
+          "product": "credit_reporting",
+          "issue": "wrong or unfair information on a credit report, disputes with a credit bureau",
+          "urgency": "high",
+          "summary": "Customer claims their credit file has been compromised with incorrect information and requests removal and blocking of fraudulent items due to identity theft."
+        },
+        "receipt": {
+          "tokens_in": 477,
+          "tokens_out": 68,
+          "cost_usd": 0.0,
+          "seconds": 7.3419411182403564
+        }
+      }
+    }
+  },
+  {
+    "row_id": 2849484,
+    "title": "Collector chasing a stranger's apartment debt",
+    "customer_label": "debt_collection",
+    "complaint": "Someone in XXXX used my identity and rented apartment in washington DC area and left that apartment company with a balance of {$1000.00}. I had left XXXX on XXXX XXXX, XXXX to XXXX after selling my house on XXXX XXXX, XXXX in XXXX XXXX Michigan, Since then I have become permanent resident of XXXX and I presently work here also in XXXX, XXXX. \n\nthis company said in order for me to take my name away from their call list they need me to file a formal report to CFPB and police. But Michigan police said I need to come in person to file the report as they don't except online complaints. \n\nHence, I hereby request you to please help me in this regard. I have XXXX credit score and presently have business in Michigan and own a house too.",
+    "answers": {
+      "Claude Haiku 5.5": {
+        "answer": {
+          "product": "debt_collection",
+          "issue": "Collector demanding payment on identity theft rental debt",
+          "urgency": "high",
+          "summary": "Consumer says someone used their identity to rent an apartment and left a $1,000 balance, and a collection company is requiring a formal police and CFPB report before removing the consumer from its call list."
+        },
+        "receipt": {
+          "tokens_in": 1212,
+          "tokens_out": 106,
+          "cost_usd": 0.00017419999999999998,
+          "seconds": 1.5343339443206787
+        }
+      },
+      "GPT-6 Luna": {
+        "answer": {
+          "product": "debt_collection",
+          "issue": "Identity theft rental debt collection",
+          "urgency": "high",
+          "summary": "The consumer says someone used their identity to rent an apartment and leave a balance of about $1,000, and the apartment company requires a CFPB and police report to remove them from its call list."
+        },
+        "receipt": {
+          "tokens_in": 609,
+          "tokens_out": 72,
+          "cost_usd": 9.690000000000001e-05,
+          "seconds": 2.2037479877471924
+        }
+      },
+      "Gemini Flash-Lite": {
+        "answer": {
+          "product": "debt_collection",
+          "issue": "Identity theft and debt collection harassment",
+          "urgency": "high",
+          "summary": "An apartment company is attempting to collect a fraudulent balance resulting from identity theft while refusing to remove the consumer from their call list without a police report."
+        },
+        "receipt": {
+          "tokens_in": 454,
+          "tokens_out": 70,
+          "cost_usd": 0.0002185,
+          "seconds": 5.617151975631714
+        }
+      },
+      "llama3.2 (local)": {
+        "answer": {
+          "product": "credit_reporting",
+          "issue": "wrong or unfair information on a credit report, disputes with a credit bureau",
+          "urgency": "low",
+          "summary": "Complainant's identity was used to rent an apartment and leave a balance. The company is requiring a formal report to the CFPB and police to remove the complainant's name from their call list."
+        },
+        "receipt": {
+          "tokens_in": 462,
+          "tokens_out": 88,
+          "cost_usd": 0.0,
+          "seconds": 7.92708420753479
+        }
+      }
+    }
+  },
+  {
+    "row_id": 422461,
+    "title": "Bank froze my checking and savings money",
+    "customer_label": "checking_savings",
+    "complaint": "Called Capital one bank in early XX/XX/2023 and requested the release of the funds in checking AND savings. Total {$1600.00} Was told that it was under investigation for \" fraud '' and would take 90 days for the investigation. Called XX/XX/XXXX ( 90 days ) to request status of the refund and was told \" 7-10 business days '' to release the money. Called again on XX/XX/XXXX and was told, again, \" 7-10 business days to close the account and release the funds ''. Capital One Bank has been holding MY money for over 5 months. I want the money refunded.",
+    "answers": {
+      "Claude Haiku 5.5": {
+        "answer": {
+          "product": "checking_savings",
+          "issue": "Bank holding funds in checking and savings for months",
+          "urgency": "high",
+          "summary": "The customer requested release of $1,600 from their Capital One checking and savings accounts, was repeatedly told the funds were under fraud investigation with vague timelines, and says the money has been held for over five months."
+        },
+        "receipt": {
+          "tokens_in": 1156,
+          "tokens_out": 108,
+          "cost_usd": 0.00016960000000000003,
+          "seconds": 1.5959632396697998
+        }
+      },
+      "GPT-6 Luna": {
+        "answer": {
+          "product": "checking_savings",
+          "issue": "Funds held in checking and savings",
+          "urgency": "high",
+          "summary": "Capital One has held $1,600 in the complainant\u2019s checking and savings accounts for over five months after a fraud investigation and has not released the funds as promised."
+        },
+        "receipt": {
+          "tokens_in": 587,
+          "tokens_out": 66,
+          "cost_usd": 9.17e-05,
+          "seconds": 4.763869524002075
+        }
+      },
+      "Gemini Flash-Lite": {
+        "answer": {
+          "product": "checking_savings",
+          "issue": "Bank holding funds without releasing them",
+          "urgency": "high",
+          "summary": "The bank has been holding the consumer's checking and savings funds for over five months under a fraud investigation without releasing the money."
+        },
+        "receipt": {
+          "tokens_in": 419,
+          "tokens_out": 67,
+          "cost_usd": 0.00020525,
+          "seconds": 2.140322208404541
+        }
+      },
+      "llama3.2 (local)": {
+        "answer": {
+          "product": "checking_savings",
+          "issue": "frozen or closed accounts",
+          "urgency": "low",
+          "summary": "Account has been frozen for over 5 months and refund request has been delayed multiple times"
+        },
+        "receipt": {
+          "tokens_in": 422,
+          "tokens_out": 54,
+          "cost_usd": 0.0,
+          "seconds": 6.299196004867554
+        }
+      }
+    }
+  },
+  {
+    "row_id": 542566,
+    "title": "Card dispute denied for charms never delivered",
+    "customer_label": "credit_card",
+    "complaint": "On XX/XX/XXXX I ordered some charms through XXXX. The charms were not delivered and I requested a refund for all the items. Since XXXX was taking too long to provide the refund I contacted my bank and requested a dispute. On XX/XX/, Citibank denied the dispute based on what XXXX claims is a venue made up of independent sellers. But on XXXX XXXX XXXX  XXXX agreed to refund the amount of the purchase but the credit never went through supposedly because I was disputing the charges with my bank. I have letters proving my claim. The original amount purchased was {$300.00}, but they did refund me back {$220.00} and I'm still missing {$73.00}. XXXX is stating that they can't provide me with the credit due to the bank dispute.",
+    "answers": {
+      "Claude Haiku 5.5": {
+        "answer": {
+          "product": "credit_card",
+          "issue": "Refund not received after disputed online purchase",
+          "urgency": "medium",
+          "summary": "The consumer ordered charms that were never delivered, disputed the charge with their bank, and received only part of the $300 refund from the merchant, which says the remaining $73 cannot be issued because of the bank dispute."
+        },
+        "receipt": {
+          "tokens_in": 1220,
+          "tokens_out": 110,
+          "cost_usd": 0.000177,
+          "seconds": 1.473872184753418
+        }
+      },
+      "GPT-6 Luna": {
+        "answer": {
+          "product": "credit_card",
+          "issue": "Disputed purchase refund not credited",
+          "urgency": "medium",
+          "summary": "The consumer says Citibank denied a dispute for undelivered charms, and the seller's agreed refund was not fully credited, leaving $73 outstanding."
+        },
+        "receipt": {
+          "tokens_in": 611,
+          "tokens_out": 62,
+          "cost_usd": 9.209999999999999e-05,
+          "seconds": 2.1726691722869873
+        }
+      },
+      "Gemini Flash-Lite": {
+        "answer": {
+          "product": "credit_card",
+          "issue": "Denied dispute for undelivered merchandise refund",
+          "urgency": "medium",
+          "summary": "The consumer is disputing a credit card charge after a merchant failed to deliver items and only partially refunded the purchase."
+        },
+        "receipt": {
+          "tokens_in": 451,
+          "tokens_out": 66,
+          "cost_usd": 0.00021175,
+          "seconds": 3.307502031326294
+        }
+      },
+      "llama3.2 (local)": {
+        "answer": {
+          "product": "credit_reporting",
+          "issue": "wrong or unfair information on a credit report",
+          "urgency": "low",
+          "summary": "Customer claims XXXX is refusing to credit refund due to bank dispute, despite agreement from XXXX to refund amount."
+        },
+        "receipt": {
+          "tokens_in": 456,
+          "tokens_out": 61,
+          "cost_usd": 0.0,
+          "seconds": 6.744787216186523
+        }
+      }
+    }
+  },
+  {
+    "row_id": 2555654,
+    "title": "Mortgage balance grew during Covid forbearance",
+    "customer_label": "mortgage",
+    "complaint": "According to the CARES Act Mortgage Servicers or Lenders were not supposed to add additional interest or fees or penalties during an approved Forbearance period. Prior to Covid-19 my loan balance was around {$100000.00} - {$100000.00}. As of today XX/XX/2021 the loan balance increased to {$110000.00}. Why is Chase Bank adding additional dollars to my balance when they were not supposed to add any additional interest, fees or penalties during Forbearance period per CARES Act?",
+    "answers": {
+      "Claude Haiku 5.5": {
+        "answer": {
+          "product": "mortgage",
+          "issue": "Loan balance increased during forbearance, possibly violating CARES Act",
+          "urgency": "high",
+          "summary": "The consumer says Chase added about $10,000 to their mortgage balance during an approved forbearance period, which they believe the CARES Act prohibits."
+        },
+        "receipt": {
+          "tokens_in": 1134,
+          "tokens_out": 99,
+          "cost_usd": 0.0001629,
+          "seconds": 1.4950957298278809
+        }
+      },
+      "GPT-6 Luna": {
+        "answer": {
+          "product": "mortgage",
+          "issue": "Loan balance increased during forbearance",
+          "urgency": "medium",
+          "summary": "The consumer says Chase increased their mortgage balance during an approved forbearance despite the CARES Act protections against additional interest, fees, or penalties."
+        },
+        "receipt": {
+          "tokens_in": 560,
+          "tokens_out": 61,
+          "cost_usd": 8.65e-05,
+          "seconds": 1.6501133441925049
+        }
+      },
+      "Gemini Flash-Lite": {
+        "answer": {
+          "product": "mortgage",
+          "issue": "Incorrect loan balance increase during forbearance",
+          "urgency": "medium",
+          "summary": "The consumer states that Chase Bank incorrectly increased their mortgage loan balance during an approved COVID-19 forbearance period in violation of the CARES Act."
+        },
+        "receipt": {
+          "tokens_in": 402,
+          "tokens_out": 69,
+          "cost_usd": 0.000204,
+          "seconds": 1.3988842964172363
+        }
+      },
+      "llama3.2 (local)": {
+        "answer": {
+          "product": "mortgage",
+          "issue": "loan balance increase during Forbearance period",
+          "urgency": "high",
+          "summary": "Chase Bank is adding additional interest and fees to my loan balance despite the CARES Act prohibiting such actions during Forbearance periods."
+        },
+        "receipt": {
+          "tokens_in": 395,
+          "tokens_out": 67,
+          "cost_usd": 0.0,
+          "seconds": 6.285248517990112
+        }
+      }
+    }
+  }
+]

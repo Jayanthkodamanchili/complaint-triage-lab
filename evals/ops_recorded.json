@@ -1,0 +1,37 @@
+[
+  {
+    "question": "Which approach gives the best accuracy for the money?",
+    "answer": "**GPT-6 Luna** gives the best accuracy among the listed approaches: **95.6% on corrected labels** at **$96 per 1 million complaints**. If minimizing cost matters more, the **Router** costs **$43 per million** and scores **95.2%** on corrected labels.",
+    "tools": [
+      "compare_models({\"sort_by\":\"corrected_accuracy\"})"
+    ]
+  },
+  {
+    "question": "How many mortgage complaints are high urgency?",
+    "answer": "There are 53 high-urgency mortgage complaints.",
+    "tools": [
+      "count_by_urgency({\"product\":\"mortgage\"})"
+    ]
+  },
+  {
+    "question": "What are the top 3 issues in debt collection complaints?",
+    "answer": "Top issues in debt collection complaints:\n\n1. **Attempts to collect debt not owed** \u2014 21 complaints\n2. **Took or threatened to take negative or legal action** \u2014 13 complaints\n3. **False statements or representation** \u2014 13 complaints",
+    "tools": [
+      "get_top_issues({\"product\":\"debt_collection\",\"limit\":3})"
+    ]
+  },
+  {
+    "question": "Show me 2 high-urgency credit card complaints.",
+    "answer": "1. The consumer disputed a **$180 fraudulent credit card charge** that the issuer deemed legitimate and threatened to send to collections and report to credit bureaus. The consumer paid under protest and seeks a refund.\n2. The consumer ordered a **$5,600 item that arrived in empty boxes**. After two Amex disputes were closed in the merchant\u2019s favor, the consumer says they still haven\u2019t received the merchant\u2019s supporting documents.",
+    "tools": [
+      "get_examples({\"product\":\"credit_card\",\"urgency\":\"high\",\"limit\":2})"
+    ]
+  },
+  {
+    "question": "Is the most expensive model always the most accurate?",
+    "answer": "No. The most expensive model, Gemini Flash-Lite ($225 per million complaints), scored 84.4% on customer labels and 95.4% on corrected labels. GPT-6 Luna cost less ($96 per million) and scored higher on both: 84.8% and 95.6%, respectively.",
+    "tools": [
+      "compare_models({\"sort_by\":\"cost\"})"
+    ]
+  }
+]

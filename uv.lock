@@ -452,6 +452,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "gradio" },
+    { name = "joblib" },
     { name = "matplotlib" },
     { name = "openai" },
     { name = "pandas" },
@@ -474,6 +475,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "gradio", specifier = ">=5.47,<6" },
+    { name = "joblib", specifier = ">=1.6.0" },
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "openai", specifier = ">=3.51.0" },
     { name = "pandas", specifier = ">=2.3.3" },
