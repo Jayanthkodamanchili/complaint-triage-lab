@@ -16,6 +16,7 @@ OUTPUT_FILES = {  # same folder and naming style as the Phase 2 files
     "gemini": "evals/predictions/gemini_flash_lite.csv",
     "openai": "evals/predictions/gpt6_luna.csv",
     "anthropic": "evals/predictions/claude_haiku.csv",
+    "sol": "evals/predictions/gpt62_sol_premium.csv",
 }
 GEMINI_PAUSE = 4  # seconds between real Gemini calls, to stay under free-tier limits
 
@@ -54,6 +55,12 @@ def run(provider_name: str, mode: str) -> None:
     if mode == "dry":
         # 4 complaints from each of the 5 classes = 20, the same 20 every time
         test = test.groupby("label").sample(4, random_state=42)
+    if mode == "dry":
+        # 4 complaints from each of the 5 classes = 20, the same 20 every time
+        test = test.groupby("label").sample(4, random_state=42)
+    if mode == "premium":
+        # 20 complaints from each of the 5 classes = 100, the same 100 every time
+        test = test.groupby("label").sample(20, random_state=42)
 
     conn = connect()
     first_receipt_id = conn.execute(
@@ -98,7 +105,7 @@ def run(provider_name: str, mode: str) -> None:
     print(f"Real calls this run: {paid_calls} | cost this run: ${spent:.4f}")
     print(f"Average seconds per complaint: {results['seconds'].mean():.2f}")
 
-    if mode == "full":
+    if mode in ("full", "premium"):
         results.to_csv(OUTPUT_FILES[provider_name], index=False)
         print("Saved:", OUTPUT_FILES[provider_name])
 

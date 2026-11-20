@@ -1,0 +1,7 @@
+approach,accuracy_%,cleaned_acc_%,macro_f1,usd_per_1k,usd_per_1m,median_sec,valid_json_%
+TF-IDF + LogReg,88.0,89.6,0.88,0.0,0,0.0001,n/a
+GPT-6 Luna,84.8,95.6,0.849,0.096,96,1.5218,100.0
+Claude Haiku 5.5,84.4,95.4,0.844,0.185,185,1.5125,100.0
+Gemini Flash-Lite,84.4,95.4,0.844,0.225,225,1.1828,100.0
+DistilBERT (HF),79.2,85.8,0.792,0.0,0,0.231,n/a
+llama3.2 (Ollama),64.8,72.9,0.647,0.0,0,7.2853,100.0

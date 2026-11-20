@@ -9,7 +9,9 @@ PRICES = {
     "llama3.2": {"input": 0.00, "output": 0.00},
     "gemini-flash-lite-latest": {"input": 0.25, "output": 1.50},
     "gpt-6-luna": {"input": 0.10, "output": 0.50},
+    "gpt-6.2-sol": {"input": 2.00, "output": 10.00},
     "claude-haiku-5-5": {"input": 0.10, "output": 0.50},
+    "claude-sonnet-5-5": {"input": 2.00, "output": 10.00},
 }
 
 

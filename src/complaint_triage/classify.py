@@ -30,14 +30,15 @@ def call_model(provider_name: str, messages: list[dict[str, str]]):
     provider = PROVIDERS[provider_name]
     client = get_client(provider)
 
-    if provider_name == "openai":
-        # GPT: switch off hidden thinking; GPT uses max_completion_tokens
+    if provider.name == "openai":
+        # GPT: as little hidden thinking as allowed (Sol refuses "none", so "low")
+        effort = "none" if provider.model == "gpt-6-luna" else "low"
         return client.chat.completions.create(
             model=provider.model,
             messages=messages,
             response_format=RESPONSE_FORMAT,
-            max_completion_tokens=1000,
-            reasoning_effort="none",
+            max_completion_tokens=2000,
+            reasoning_effort=effort,
         )
     if provider_name == "anthropic":
         # Claude: switch off hidden thinking; never send temperature to Claude

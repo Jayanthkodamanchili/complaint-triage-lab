@@ -38,12 +38,16 @@ colorama==0.4.6 ; sys_platform == 'win32'
     # via
     #   tqdm
     #   typer
+contourpy==1.4.0
+    # via matplotlib
 cuda-bindings==13.5.0 ; python_full_version < '3.15' and sys_platform == 'linux'
     # via torch
 cuda-pathfinder==1.9.0 ; python_full_version < '3.15' and sys_platform == 'linux'
     # via cuda-bindings
 cuda-toolkit==13.2.2 ; sys_platform == 'linux'
     # via torch
+cycler==0.12.1
+    # via matplotlib
 fastapi==0.163.1
     # via gradio
 ffmpy==1.0.0
@@ -52,6 +56,8 @@ filelock==4.2.10
     # via
     #   huggingface-hub
     #   torch
+fonttools==4.68.0
+    # via matplotlib
 fsspec==2026.9.0
     # via
     #   gradio-client
@@ -104,12 +110,16 @@ jiter==0.19.0
     # via openai
 joblib==1.6.0
     # via scikit-learn
+kiwisolver==1.5.1
+    # via matplotlib
 markdown-it-py==4.3.0
     # via rich
 markupsafe==3.0.4
     # via
     #   gradio
     #   jinja2
+matplotlib==3.11.2
+    # via complaint-triage
 mdurl==0.1.2
     # via markdown-it-py
 mpmath==1.3.0
@@ -120,7 +130,9 @@ networkx==3.7
     # via torch
 numpy==2.5.5
     # via
+    #   contourpy
     #   gradio
+    #   matplotlib
     #   pandas
     #   scikit-learn
     #   scipy
@@ -177,13 +189,16 @@ packaging==26.3
     #   gradio
     #   gradio-client
     #   huggingface-hub
+    #   matplotlib
     #   transformers
 pandas==2.3.3
     # via
     #   complaint-triage
     #   gradio
 pillow==11.3.0
-    # via gradio
+    # via
+    #   gradio
+    #   matplotlib
 pyarrow==26.0.1
     # via complaint-triage
 pydantic==2.12.3
@@ -199,8 +214,12 @@ pydub==0.25.1
     # via gradio
 pygments==2.21.0
     # via rich
+pyparsing==3.3.3
+    # via matplotlib
 python-dateutil==4.0.0
-    # via pandas
+    # via
+    #   matplotlib
+    #   pandas
 python-dotenv==1.2.4
     # via complaint-triage
 python-multipart==0.0.34

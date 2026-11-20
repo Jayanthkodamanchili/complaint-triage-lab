@@ -27,6 +27,7 @@ PROVIDERS: dict[str, Provider] = {
         "gemini-flash-lite-latest",
     ),
     "openai": Provider("openai", None, "OPENAI_API_KEY", "gpt-6-luna"),
+    "sol": Provider("openai", None, "OPENAI_API_KEY", "gpt-6.2-sol"),  # premium test
     "anthropic": Provider(
         "anthropic",
         "https://api.anthropic.com/v1/",
