@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from complaint_triage.classify import classify_complaint
 from complaint_triage.db import connect
 from complaint_triage.ops_assistant import DEMO_QUESTIONS, RECORDED_PATH, ask_assistant
+from complaint_triage.theme import CSS, FOOTER, GOLD, HEADER, SOFT_TEXT, THEME
 
 load_dotenv(override=True)
 
@@ -179,7 +180,9 @@ for $43 per million complaints, about 4x cheaper than Claude alone. A premium mo
 def accuracy_vs_cost_chart():
     points = ALL_ROWS
     figure, axis = plt.subplots(figsize=(8, 5))
-    axis.scatter(points["usd_per_1m"], points["cleaned_acc_%"], s=80)
+    figure.patch.set_alpha(0)  # see-through, so the night background shows
+    axis.set_facecolor("none")
+    axis.scatter(points["usd_per_1m"], points["cleaned_acc_%"], s=90, color=GOLD)
     for number, row in points.iterrows():
         shift = 8 if number % 2 == 0 else -16  # above/below, so names don't overlap
         axis.annotate(
@@ -187,13 +190,19 @@ def accuracy_vs_cost_chart():
             (row["usd_per_1m"], row["cleaned_acc_%"]),
             textcoords="offset points",
             xytext=(6, shift),
+            color=SOFT_TEXT,
         )
     axis.set_xlabel("Cost per 1 million complaints (US $)")
     axis.set_ylabel("Accuracy on the corrected labels (%)")
     axis.set_title("Accuracy vs cost: top-left is best")
     axis.set_xlim(-10, 320)
     axis.set_ylim(70, 98)
-    axis.grid(alpha=0.3)
+    axis.grid(alpha=0.25)
+    for text in [axis.title, axis.xaxis.label, axis.yaxis.label]:
+        text.set_color(SOFT_TEXT)
+    axis.tick_params(colors=SOFT_TEXT)
+    for side in axis.spines.values():
+        side.set_color(SOFT_TEXT)
     figure.tight_layout()
     return figure
 
@@ -260,19 +269,23 @@ def ops_chat(message: str, history: list[dict]) -> str:
 
 
 # Part 11: the page and its 4 tabs
-with gr.Blocks(title="Complaint Triage Lab") as demo:
-    gr.Markdown("# Complaint Triage Lab")
-    gr.Markdown("Which AI should a bank use to sort customer complaints?")
+with gr.Blocks(title="Complaint Triage Lab", theme=THEME, css=CSS) as demo:
+    gr.HTML(HEADER)
     if LIVE:
-        gr.Markdown("**Live mode:** paid models are switched on (owner's laptop).")
+        gr.Markdown(
+            "<center>🔓 <b>Live mode:</b> paid models are switched on (owner's laptop).</center>"
+        )
     else:
         gr.Markdown(
-            "**Public demo:** paid AI models are switched off. Pre-built complaints show "
-            "the real answers the models gave us; your own text is answered by the free "
-            "TF-IDF model."
+            "<center>🔒 <b>Public demo:</b> paid AI models are switched off. Pre-built "
+            "complaints show the real answers the models gave us; your own text is "
+            "answered by the free TF-IDF model.</center>"
         )
 
-    with gr.Tab("Classify"):
+    with gr.Tab("🗂️ Classify"):
+        gr.Markdown(
+            "Type a complaint or click a pre-built one, pick a model, press **Classify**."
+        )
         complaint_box = gr.Textbox(
             label="Customer complaint: type your own, or click a pre-built one below",
             placeholder="Example: My credit card was charged twice for one hotel booking",
@@ -296,7 +309,7 @@ with gr.Blocks(title="Complaint Triage Lab") as demo:
             outputs=[answer_box, report_box],
         )
 
-    with gr.Tab("Benchmark"):
+    with gr.Tab("📊 Benchmark"):
         gr.Markdown(KEY_FINDING)
         gr.Dataframe(
             value=LEADERBOARD,
@@ -309,7 +322,7 @@ with gr.Blocks(title="Complaint Triage Lab") as demo:
             label="Confusion matrices: which products each model mixes up",
         )
 
-    with gr.Tab("Label Audit"):
+    with gr.Tab("🔍 Label Audit"):
         gr.Markdown(AUDIT_INTRO)
         verdict_filter = gr.Radio(
             choices=["All"] + list(VERDICT_NAMES.values()),
@@ -321,7 +334,7 @@ with gr.Blocks(title="Complaint Triage Lab") as demo:
         )
         verdict_filter.change(filter_audit, inputs=verdict_filter, outputs=audit_table)
 
-    with gr.Tab("Ops Assistant"):
+    with gr.Tab("💬 Ops Assistant"):
         gr.Markdown(
             "Ask about the 500 complaints and the model results. The assistant answers "
             "**only through 4 tools** that look things up in our results database "
@@ -334,6 +347,8 @@ with gr.Blocks(title="Complaint Triage Lab") as demo:
             examples=DEMO_QUESTIONS,
             cache_examples=False,
         )
+
+    gr.Markdown(FOOTER)
 
 # Part 12: start the app when we run this file
 if __name__ == "__main__":
